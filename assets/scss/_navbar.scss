@@ -88,14 +88,14 @@
     padding-bottom: 15px;
 
     .nav-link {
-      color: $color-primary;
+      color: $primary;
 
       &:before {
-        background-color: $color-primary;
+        background-color: $primary;
       }
 
       &:hover {
-        color: $color-primary;
+        color: $primary;
       }
     }
 
@@ -103,11 +103,11 @@
     .active>.nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: $color-primary;
+      color: $primary;
     }
 
     .navbar-brand {
-      color: $color-primary;
+      color: $primary;
     }
 
     .navbar-toggler span {
@@ -139,13 +139,13 @@
       transition: all 500ms ease;
 
       &:hover {
-        background-color: $color-primary;
+        background-color: $primary;
         color: #fff;
         transition: all 500ms ease;
       }
 
       &.active {
-        background-color: $color-primary;
+        background-color: $primary;
       }
     }
   }

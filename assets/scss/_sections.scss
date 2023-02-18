@@ -25,18 +25,18 @@
 
 .skill-mf {
   span {
-    color: $color-text-primary;
+    color: $default;
   }
 
   .progress {
-    background-color: $color-primary-light;
+    background-color: $primary-light;
     margin: .5rem 0 1.2rem 0;
     border-radius: 0;
     height: .7rem;
 
     .progress-bar {
       height: .7rem;
-      background-color: $color-primary;
+      background-color: $primary;
     }
   }
 }
@@ -50,24 +50,31 @@
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  text-align: center;
 
   &:hover {
     .ico-circle {
       transition: all 500ms ease;
       color: #fff;
-      background-color: $color-primary;
-      box-shadow: 0 0 0 10px $color-primary-light;
+      background-color: $primary;
+      box-shadow: 0 0 0 10px $primary-light;
     }
   }
 
   .service-ico {
     margin-bottom: 1rem;
-    color: $color-text-secondary;
+    color: $default-dark;
   }
 
   .ico-circle {
     transition: all 500ms ease;
-    font-size: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      line-height: 0;
+      font-size: 40px;
+    }
   }
 
   .s-title {
@@ -78,7 +85,7 @@
   }
 
   .s-description {
-    color: $color-text-primary;
+    color: $default;
   }
 }
 
@@ -100,8 +107,8 @@
   .ico-circle {
     height: 60px;
     width: 60px;
-    line-height: 1.8;
-    box-shadow: 0 0 0 10px $color-primary-light;
+    line-height: 1.5;
+    box-shadow: 0 0 0 10px $primary-light;
   }
 }
 
@@ -141,21 +148,21 @@
   padding: 2rem 3% 1rem 4%;
 
   .w-more {
-    color: $color-text-primary;
+    color: $default;
     font-size: .8rem;
 
     .w-ctegory {
-      color: $color-primary;
+      color: $primary;
     }
   }
 
   .w-like {
     font-size: 2.5rem;
-    color: $color-primary;
+    color: $primary;
     float: right;
 
     a {
-      color: $color-primary;
+      color: $primary;
     }
 
     .num-like {
@@ -168,50 +175,39 @@
   font-size: 1.2rem;
 }
 
-
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
-  padding-top: 30px;
 
+  padding-top: 40px;
 
-  .portfolio-details-container {
-    position: relative;
+  .portfolio-details-slider {
+    img {
+      width: 100%;
+    }
+    .swiper-pagination {
+      margin-top: 20px;
+      position: relative;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        opacity: 1;
+        border: 1px solid $primary;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: $primary;
+      }
+    }
+
   }
-
-  .portfolio-details-carousel {
-    position: relative;
-    z-index: 1;
-    .owl-nav, .owl-dots {
-      margin-top: 5px;
-      text-align: left;
-    }
-
-    .owl-dot {
-      display: inline-block;
-      margin: 0 10px 0 0;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #ddd !important;
-    }
-
-    .owl-dot.active {
-      background-color: $color-primary !important;
-    }
-  }
-
 
   .portfolio-info {
     padding: 30px;
-    position: absolute;
-    right: 0;
-    bottom: -70px;
-    background: #fff;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
-    z-index: 2;
+    box-shadow: 0px 0 30px rgba($default, 0.08);
 
     h3 {
       font-size: 22px;
@@ -230,41 +226,30 @@
         margin-top: 10px;
       }
     }
-
+    
   }
 
   .portfolio-description {
-    padding-top: 50px;
-
+    padding-top: 30px;
+    
     h2 {
-      width: 50%;
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 20px;
     }
 
     p {
-      padding: 0 0 0 0;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .portfolio-description h2 {
-      width: 100%;
-    }
-    .portfolio-info {
-      position: static;
-      margin-top: 30px;
+      padding: 0;
     }
   }
 
 }
+
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .owl-carousel .owl-item img {
-  width: auto;
-}
+
 
 .testimonial-box {
   color: #fff;
@@ -289,7 +274,7 @@
 
   .comit {
     font-size: 2rem;
-    color: $color-primary;
+    color: $primary;
     background-color: #fff;
     width: 52px;
     height: 52px;
@@ -314,6 +299,21 @@
   }
 }
 
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(#fff, .4);
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+}
 
 /*--------------------------------------------------------------
 # Contact
@@ -335,14 +335,6 @@
 }
 
 .php-email-form {
-
-  .validate {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-  }
   
   .error-message {
     display: none;
@@ -386,13 +378,13 @@
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
-    &::focus {
-      background-color: $color-primary;
+    &:focus {
+      border-color: $primary;
     }
   }
 
   input {
-    padding: 20px 15px;
+    padding: 10px 15px;
   }
 
   textarea {
@@ -401,13 +393,13 @@
   }
 
   button[type="submit"] {
-    background: $color-primary;
+    background: $primary;
     border: 0;
     padding: 10px 24px;
     color: #fff;
     transition: 0.4s;
     &:hover {
-      background: lighten($color-primary, 10%);
+      background: lighten($primary, 10%);
     }
   }
 
