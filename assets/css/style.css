@@ -25,7 +25,7 @@ h4,
 h5,
 h6 {
   color: #1e1e1e;
-  font-family: 'Cinzel', serif;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -69,6 +69,8 @@ a:hover {
 .service-box,
 .paralax-mf {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+
 }
 
 .box-shadow-a,
