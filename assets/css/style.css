@@ -1058,6 +1058,7 @@ a:hover {
 
 .work-img img {
   transition: all 1s;
+  min-height: 250px;
 }
 
 .work-content {
