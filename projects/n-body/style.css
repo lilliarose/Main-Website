@@ -1,0 +1,67 @@
+#menu {
+    margin-top: -170px;
+    padding-left: 200px;
+}
+
+#menu .velocity {
+    padding-left: 45px;
+}
+
+.arrowDiv {
+    justify-content: center;
+    text-align: center;
+}
+
+.saveButton {
+    margin-left: 15px;
+    padding: 0;
+}
+
+.favourites {
+    margin-left: 30px;
+}
+
+.form-select {
+    width: 115px;
+}
+
+.bi-bookmark-plus {
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+.bi-bookmark-plus:hover {
+    cursor: pointer;
+}
+
+#btnRemove {
+    margin-left: 15px;
+}
+
+.sliders {
+    margin-top: -35px;
+}
+
+.playRow {
+    margin-top: 23px;
+}
+
+.input-group {
+    margin-top: -5px;
+}
+
+.favourite {
+    padding: 2px !important;
+    display: block;
+}
+
+.form-select {
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.btn-fav {
+    padding: 4px !important;
+}

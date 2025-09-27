@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-body simulation</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type='module' src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .content {
+            padding: 2% 5%;
+        }
+
+        .row {
+            padding-top: 20px;
+        }
+
+        .caption {
+            color: grey;
+            font-size: 12px;
+        }
+
+        h3 {
+            padding-top: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="canvasContainer"></div>
+    <div id="menu" class="row d-flex justify-content-start align-items-top">
+        <div class="column">
+            <h2 id="menuTitle"></h2>
+            <form>
+                <div class="input-group mb-3" id="nameInputDiv">
+                    <span class="input-group-text" id="massLabel">Name</span>
+                    <input type="text" class="input-group-text" id="nameInput" aria-describedby="nameLabel">
+                    <button class="btn btn-primary" type="button" id="nameButton" onclick="changeName()">Set</button>
+                </div>
+                <div class="input-group mb-3" id="massInputDiv">
+                    <span class="input-group-text" id="massLabel">Mass</span>
+                    <input type="number" class="input-group-text" id="massInput" aria-describedby="massLabel">
+                    <button class="btn btn-primary" type="button" id="massButton" onclick="setMass()">Set</button>
+                </div>
+            </form>
+        </div>
+        <div class="column velocity">
+            <form>
+                <div id="velocityInputDiv">
+                    <div class="row arrowDiv">
+                        <div class="col">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="arrow" width="30" height="30" fill="gray" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                            </svg><br>
+                            <p id="velocityMagnitude" style="color: gray;">0</p>
+                        </div>
+                    </div>
+                    <div class="row sliders">
+                        <div class="col">
+                            <input type="range" class="form-range" disabled id="velocityAngleInput"><br>
+                            <input type="range" class="form-range" id="velocityMagnitudeInput">                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-3">
+            <div class="row playRow justify-content-end" id="playRow">
+                <button type="button" onclick="playButton()" id="playBtn" class="btn btn-success">Play</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./createOrbits.js"></script>
+
+</html>
